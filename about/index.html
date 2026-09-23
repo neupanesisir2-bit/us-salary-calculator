@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,6 +19,37 @@ header{background:#111827;color:white;padding:30px;text-align:center}
 .content{background:white;padding:30px;border-radius:14px}
 h2{margin-top:30px}
 footer{text-align:center;padding:30px;color:#6b7280}
+</style>
+<style>
+.site-footer {
+    margin-top: 40px;
+    padding: 30px 15px;
+    text-align: center;
+    background: #111827;
+    color: #d1d5db;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
 </style>
 </head>
 
@@ -76,9 +107,18 @@ please visit our Contact page.
 </section>
 </main>
 
-<footer>
-© 2026 US Salary Calculator. All rights reserved.
-</footer>
 
+
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/us-salary-calculator/privacy-policy/">Privacy Policy</a>
+        <a href="/us-salary-calculator/terms/">Terms of Use</a>
+        <a href="/us-salary-calculator/disclaimer/">Disclaimer</a>
+        <a href="/us-salary-calculator/about/">About</a>
+        <a href="/us-salary-calculator/contact/">Contact</a>
+    </div>
+    <p>Â© 2026 US Salary Calculator. All rights reserved.</p>
+</footer>
 </body>
 </html>
