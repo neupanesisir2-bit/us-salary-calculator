@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neupanesisir2-bit.github.io/sitemap.xml
+Sitemap: https://neupanesisir2-bit.github.io/us-salary-calculator/sitemap.xml
