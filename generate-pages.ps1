@@ -1,4 +1,4 @@
-$states = @{
+﻿$states = @{
 "Alabama"="alabama"
 "Alaska"="alaska"
 "Arizona"="arizona"
@@ -170,10 +170,10 @@ benefits, retirement contributions, tax credits and withholding elections.
 
 <h3>Frequently Asked Questions</h3>
 
-<h4>How much is $75,000 a year after taxes in $state?</h4>
+<h4>How much is `$75,000 a year after taxes in ${state}?</h4>
 
 <p>
-Enter $75,000 above and select your filing status to see an estimate.
+Enter `$75,000 above and select your filing status to see an estimate.
 </p>
 
 <h4>Can I calculate monthly take-home pay?</h4>
@@ -194,7 +194,7 @@ No. This tool is an estimate for general informational purposes only.
 </main>
 
 <footer>
-� 2026 US Salary Calculator. For informational purposes only.
+© 2026 US Salary Calculator. For informational purposes only.
 </footer>
 
 <script src="../calculator.js"></script>
@@ -236,3 +236,7 @@ Set-Content "sitemap.xml" $sitemap -Encoding UTF8
 
 Write-Host ""
 Write-Host "DONE! 50 STATE PAGES + SITEMAP GENERATED." -ForegroundColor Green
+
+
+
+

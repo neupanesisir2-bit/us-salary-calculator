@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const states = {
@@ -319,10 +319,10 @@ const template = (stateName, slug, key) => `<!DOCTYPE html>
 
     <h3>Frequently Asked Questions</h3>
 
-    <h4>How much is $75,000 a year after taxes in ${stateName}?</h4>
+    <h4>How much is \$75,000 a year after taxes in ${stateName}?</h4>
 
     <p>
-        Enter $75,000 above and select your filing status to see an estimated
+        Enter \$75,000 above and select your filing status to see an estimated
         take-home amount.
     </p>
 
@@ -345,7 +345,7 @@ const template = (stateName, slug, key) => `<!DOCTYPE html>
 </main>
 
 <footer>
-    � 2026 US Salary Calculator. For informational purposes only.
+    © 2026 US Salary Calculator. For informational purposes only.
 </footer>
 
 <script src="../calculator.js"></script>
@@ -402,3 +402,4 @@ fs.writeFileSync(
 );
 
 console.log("DONE! 50 state pages + sitemap generated.");
+
