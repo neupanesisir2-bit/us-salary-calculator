@@ -679,41 +679,28 @@ function calculateSalary() {
         Display results
     */
 
-    document.getElementById("annual").textContent =
-        money(salary);
+function setResult(ids, value) {
+    const element = ids
+        .map(id => document.getElementById(id))
+        .find(Boolean);
 
-    document.getElementById("federal").textContent =
-        money(federalTax);
+    if (element) {
+        element.textContent = money(value);
+    }
+}
 
-    document.getElementById("stateTax").textContent =
-        money(stateTax);
-
-    document.getElementById("social").textContent =
-        money(socialSecurity);
-
-    document.getElementById("medicare").textContent =
-        money(medicare);
-
-    document.getElementById("additionalMedicare").textContent =
-        money(additionalMedicare);
-
-    document.getElementById("totalTax").textContent =
-        money(totalTax);
-
-    document.getElementById("takeHome").textContent =
-        money(takeHome);
-
-    document.getElementById("monthly").textContent =
-        money(monthly);
-
-    document.getElementById("biweekly").textContent =
-        money(biweekly);
-
-    document.getElementById("weekly").textContent =
-        money(weekly);
-
-    document.getElementById("hourly").textContent =
-        money(hourly);
+setResult(["annual", "grossSalary"], salary);
+setResult(["federal", "federalTax"], federalTax);
+setResult(["stateTax"], stateTax);
+setResult(["social", "socialSecurity"], socialSecurity);
+setResult(["medicare"], medicare);
+setResult(["additionalMedicare"], additionalMedicare);
+setResult(["totalTax"], totalTax);
+setResult(["takeHome"], takeHome);
+setResult(["monthly"], monthly);
+setResult(["biweekly"], biweekly);
+setResult(["weekly"], weekly);
+setResult(["hourly"], hourly);
 
 
     /*
