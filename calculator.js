@@ -62,8 +62,8 @@ const FEDERAL = {
 const STATES = {
 
     alabama: {
-        singleBrackets: [[0, 0.02], [500, 0.04], [3000, 0.05]],
-        marriedBrackets: [[0, 0.02], [1000, 0.04], [6000, 0.05]],
+        singleBrackets: [[500, 0.02], [3000, 0.04], [Infinity, 0.05]],
+        marriedBrackets: [[1000, 0.02], [6000, 0.04], [Infinity, 0.05]],
         singleDeduction: 3000,
         marriedDeduction: 8500
     },
@@ -857,3 +857,5 @@ document
 
         }
     );
+
+
