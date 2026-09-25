@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://neupanesisir2-bit.github.io/us-salary-calculator/</loc>
@@ -54,4 +54,16 @@
   <url><loc>https://neupanesisir2-bit.github.io/us-salary-calculator/west-virginia-salary-calculator/</loc></url>
   <url><loc>https://neupanesisir2-bit.github.io/us-salary-calculator/wisconsin-salary-calculator/</loc></url>
   <url><loc>https://neupanesisir2-bit.github.io/us-salary-calculator/wyoming-salary-calculator/</loc></url>
-</urlset>
+  <url>
+    <loc>https://neupanesisir2-bit.github.io/us-salary-calculator/about.html</loc>
+  </url>
+  <url>
+    <loc>https://neupanesisir2-bit.github.io/us-salary-calculator/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://neupanesisir2-bit.github.io/us-salary-calculator/privacy.html</loc>
+  </url>
+  <url>
+    <loc>https://neupanesisir2-bit.github.io/us-salary-calculator/disclaimer.html</loc>
+  </url></urlset>
+
