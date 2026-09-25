@@ -1,36 +1,59 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Us | US Salary Calculator</title>
+    <title>About Us | US Salary Calculator 2026</title>
 
-    <meta name="description"
-          content="Learn about the US Salary Calculator and how our free salary estimation tool works.">
+    <meta name="description" content="Learn about US Salary Calculator and our goal of providing simple, useful salary and take-home pay estimates for workers across the United States.">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neupanesisir2-bit.github.io/us-salary-calculator/about.html">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #172033;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
             line-height: 1.7;
         }
 
         header {
-            background: #0b1f3a;
+            background: #111827;
             color: white;
-            padding: 22px;
+            padding: 18px 20px;
         }
 
-        header div {
-            max-width: 850px;
+        nav {
+            max-width: 1100px;
             margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         main {
-            max-width: 850px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -38,16 +61,54 @@
         .card {
             background: white;
             padding: 35px;
-            border-radius: 16px;
-            box-shadow: 0 5px 25px rgba(0,0,0,.06);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         }
 
         h1 {
             margin-top: 0;
+            font-size: 36px;
+        }
+
+        h2 {
+            margin-top: 0;
         }
 
         a {
-            color: #1764a5;
+            color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #111827;
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
         }
     </style>
 </head>
@@ -55,51 +116,109 @@
 <body>
 
 <header>
-    <div>
-        <strong>US Salary Calculator</strong>
-    </div>
+    <nav>
+        <a href="index.html">US Salary Calculator</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </nav>
 </header>
 
 <main>
 
-    <div class="card">
-
-        <h1>About US Salary Calculator</h1>
+    <section class="card">
+        <h1>About Us</h1>
 
         <p>
-            US Salary Calculator is a free online tool designed to help
-            people estimate their potential take-home pay based on salary,
-            state and federal filing status.
+            Welcome to US Salary Calculator, a free online tool designed to help
+            people estimate their take-home pay based on salary, state, and
+            federal filing status.
         </p>
 
         <p>
-            The calculator is intended for general educational and planning
-            purposes. It helps users understand how federal taxes, state
-            taxes and common payroll taxes can affect gross income.
+            Our goal is to make salary calculations easier to understand by
+            presenting estimated federal taxes, state taxes, Social Security,
+            Medicare, and estimated take-home pay in a simple format.
         </p>
+    </section>
 
-        <h2>Our Goal</h2>
+    <section class="card">
+        <h2>What We Provide</h2>
 
         <p>
-            Our goal is to make salary and take-home-pay information easier
-            to understand through a simple, fast and accessible calculator.
-        </p>
-
-        <h2>Important</h2>
-
-        <p>
-            Results are estimates and should not be treated as tax,
-            accounting, legal or financial advice. Actual tax liability and
-            paycheck amounts may vary based on individual circumstances.
+            Our website provides salary calculator tools for all 50 U.S. states.
+            Users can enter an annual gross salary, select their state and filing
+            status, and receive an estimated breakdown of their income and taxes.
         </p>
 
         <p>
-            <a href="index.html">← Back to Calculator</a>
+            We also provide educational information to help users better
+            understand how salary and payroll taxes can affect their estimated
+            take-home pay.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Our Approach</h2>
+
+        <p>
+            We aim to keep our calculators simple, accessible, and easy to use.
+            We regularly review the information used by the calculators and
+            improve the website when updates are needed.
         </p>
 
-    </div>
+        <p>
+            Salary calculations can vary depending on individual circumstances,
+            including deductions, benefits, credits, local taxes, and other
+            payroll factors. For this reason, the results shown on this website
+            should be treated as estimates rather than official tax calculations.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Important Information</h2>
+
+        <p>
+            US Salary Calculator is an informational website. The calculators
+            are not intended to provide tax, financial, legal, or accounting
+            advice.
+        </p>
+
+        <p>
+            For decisions involving your personal tax situation, consider
+            consulting a qualified tax professional or reviewing information
+            from the appropriate government authorities.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Contact Us</h2>
+
+        <p>
+            If you have a question, notice an issue with the website, or want to
+            provide feedback, please visit our
+            <a href="contact.html">Contact Us</a> page.
+        </p>
+    </section>
 
 </main>
 
+<footer>
+    <p>&copy; 2026 US Salary Calculator. All rights reserved.</p>
+
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a>
+    </p>
+</footer>
+
 </body>
 </html>
+```
