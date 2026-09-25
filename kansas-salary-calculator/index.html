@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,131 +9,686 @@
 
 <meta name="description" content="Calculate your estimated 2026 Kansas take-home pay, federal tax, state tax, Social Security and Medicare taxes based on salary and filing status.">
 
-<meta name="keywords" content="Kansas salary calculator, Kansas paycheck calculator, Kansas take home pay calculator, Kansas tax calculator, 2026 salary calculator">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://neupanesisir2-bit.github.io/us-salary-calculator/kansas-salary-calculator/">
 
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f4f7fb;color:#1f2937;line-height:1.6}
-.container{width:92%;max-width:900px;margin:auto}
-header{background:#111827;color:white;padding:30px 0;text-align:center}
-header h1{margin:0 0 8px}
-.calculator,.content{background:white;margin:30px auto;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,.07)}
-label{display:block;margin-top:15px;margin-bottom:6px;font-weight:bold}
-input,select,button{width:100%;padding:13px;border-radius:8px;border:1px solid #d1d5db;font-size:16px}
-button{margin-top:20px;background:#2563eb;color:white;border:0;cursor:pointer;font-weight:bold}
-.results{margin-top:25px;padding:20px;background:#f3f4f6;border-radius:10px}
-.result-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #ddd}
-footer{text-align:center;padding:30px;color:#6b7280}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    background:linear-gradient(135deg,#0b1f3a,#123f72);
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:20;
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+}
+
+.nav-links a{
+    opacity:.9;
+}
+
+.nav-links a:hover{
+    opacity:1;
+    text-decoration:underline;
+}
+
+.hero{
+    background:linear-gradient(135deg,#0b1f3a,#1764a5);
+    color:white;
+    padding:65px 20px 90px;
+    text-align:center;
+}
+
+.hero-inner{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:clamp(32px,6vw,52px);
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:.92;
+    max-width:700px;
+    margin:auto;
+}
+
+.container{
+    width:min(100% - 30px,900px);
+    margin:-50px auto 60px;
+    position:relative;
+    z-index:5;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:32px;
+    box-shadow:0 15px 50px rgba(20,40,70,.12);
+}
+
+.calculator h2{
+    font-size:25px;
+    margin-bottom:7px;
+}
+
+.subtext{
+    color:#657084;
+    margin-bottom:25px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-weight:700;
+    font-size:14px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px 15px;
+    border:1px solid #d7deea;
+    border-radius:10px;
+    background:white;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:#1764a5;
+    box-shadow:0 0 0 3px rgba(23,100,165,.1);
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:16px;
+    border:0;
+    border-radius:11px;
+    background:#1764a5;
+    color:white;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-1px);
+    background:#0e548e;
+}
+
+.ad{
+    margin:28px auto;
+    min-height:90px;
+    border:1px dashed #ccd4df;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8a94a6;
+    font-size:13px;
+    background:#fafbfd;
+}
+
+.results{
+    margin-top:30px;
+    padding:22px;
+    background:#f7f9fc;
+    border-radius:15px;
+}
+
+.results h3{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.result-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:14px 5px;
+    border-bottom:1px solid #e1e6ee;
+}
+
+.result-row:last-child{
+    border-bottom:0;
+}
+
+.result-row strong:last-child{
+    font-weight:800;
+}
+
+.result-row:last-child{
+    background:#eef6ff;
+    margin:10px -5px -5px;
+    padding:16px 10px;
+    border-radius:10px;
+}
+
+.periods{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:18px;
+}
+
+.period{
+    background:white;
+    padding:17px 12px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid #e1e6ee;
+}
+
+.period span{
+    display:block;
+    font-size:13px;
+    color:#697386;
+    margin-bottom:4px;
+}
+
+.period strong{
+    font-size:18px;
+}
+
+.content{
+    margin-top:25px;
+}
+
+.content h2{
+    margin-bottom:13px;
+    font-size:25px;
+}
+
+.content h3{
+    margin-top:22px;
+    margin-bottom:7px;
+    font-size:18px;
+}
+
+.content h4{
+    margin-top:18px;
+    margin-bottom:6px;
+    font-size:16px;
+}
+
+.content p{
+    color:#566174;
+    margin-bottom:12px;
+}
+
+.notice{
+    background:#fff8e6;
+    border:1px solid #f0d98b;
+    padding:18px;
+    border-radius:12px;
+    color:#624d16;
+    margin-top:20px;
+}
+
+footer{
+    background:#0b1f3a;
+    color:#dbe5f2;
+    padding:35px 20px;
+    margin-top:60px;
+}
+
+.footer-inner{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+}
+
+.footer-links a:hover{
+    text-decoration:underline;
+}
+
+.copyright{
+    color:#9eb0c7;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:50px 18px 80px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .periods{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .result-row{
+        font-size:14px;
+    }
+
+    .period strong{
+        font-size:16px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="container">
-<h1>Kansas Salary Calculator 2026</h1>
-<p>Estimate your take-home pay based on salary and filing status.</p>
-</div>
+    <div class="nav">
+
+        <a class="logo" href="../">US Salary Calculator</a>
+
+        <nav class="nav-links">
+            <a href="#calculator">Calculator</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+    </div>
 </header>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <h1>Kansas Salary Calculator 2026</h1>
+
+        <p>
+            Estimate your Kansas take-home pay, federal tax,
+            state tax and payroll taxes based on your salary.
+        </p>
+
+    </div>
+
+</section>
 
 <main class="container">
 
-<section class="calculator">
+    <div class="ad">
+        Advertisement
+    </div>
 
-<h2>Kansas Take-Home Pay Calculator</h2>
+    <section class="card calculator" id="calculator">
 
-<label for="salary">Annual Salary</label>
-<input type="number" id="salary" value="75000" placeholder="Example: 75000">
+        <h2>Kansas Take-Home Pay Calculator</h2>
 
-<label for="state">State</label>
-<select id="state">
-<option value="kansas" selected>Kansas</option>
-</select>
+        <p class="subtext">
+            Enter your annual salary and filing status to estimate your
+            take-home pay.
+        </p>
 
-<label for="filing">Filing Status</label>
-<select id="filing">
-<option value="single">Single</option>
-<option value="married">Married Filing Jointly</option>
-<option value="hoh">Head of Household</option>
-</select>
+        <div class="form-grid">
 
-<button id="calculateBtn">Calculate Take-Home Pay</button>
+            <div class="form-group full">
 
-<div class="results">
-<div class="result-row"><span>Annual Salary</span><strong id="grossSalary"></strong></div>
-<div class="result-row"><span>Federal Tax</span><strong id="federalTax"></strong></div>
-<div class="result-row"><span>State Tax</span><strong id="stateTax"></strong></div>
-<div class="result-row"><span>Social Security</span><strong id="socialSecurity"></strong></div>
-<div class="result-row"><span>Medicare</span><strong id="medicare"></strong></div>
-<div class="result-row"><span>Additional Medicare</span><strong id="additionalMedicare"></strong></div>
-<div class="result-row"><span>Total Tax</span><strong id="totalTax"></strong></div>
-<div class="result-row"><span>Annual Take-Home Pay</span><strong id="takeHome"></strong></div>
-<div class="result-row"><span>Monthly Take-Home</span><strong id="monthly"></strong></div>
-<div class="result-row"><span>Biweekly Take-Home</span><strong id="biweekly"></strong></div>
-<div class="result-row"><span>Weekly Take-Home</span><strong id="weekly"></strong></div>
-<div class="result-row"><span>Hourly Take-Home</span><strong id="hourly"></strong></div>
-</div>
+                <label for="salary">Annual Salary</label>
 
-</section>
+                <input
+                    type="number"
+                    id="salary"
+                    min="1"
+                    step="100"
+                    value="75000"
+                    placeholder="Example: 75000"
+                >
 
-<section class="content">
+            </div>
 
-<h2>Kansas Salary Calculator 2026</h2>
+            <div class="form-group">
 
-<p>
-Use this Kansas salary calculator to estimate your take-home pay from your
-annual gross salary. Enter your salary and filing status to estimate federal
-and payroll taxes.
-</p>
+                <label for="state">State</label>
 
-<h3>How to Calculate Take-Home Pay in Kansas</h3>
+                <select id="state">
 
-<p>
-Enter your annual salary, choose your filing status, and calculate your
-estimated annual, monthly, biweekly, weekly and hourly take-home pay.
-</p>
+                    <option value="kansas" selected>
+                        Kansas
+                    </option>
 
-<h3>Important Information</h3>
+                </select>
 
-<p>
-This calculator provides an estimate for general informational purposes.
-Actual paychecks and tax liabilities can vary because of deductions,
-benefits, retirement contributions, tax credits and withholding elections.
-</p>
+            </div>
 
-<h3>Frequently Asked Questions</h3>
+            <div class="form-group">
 
-<h4>How much is $75,000 a year after taxes in Kansas?</h4>
+                <label for="filing">Filing Status</label>
 
-<p>
-Enter $75,000 above and select your filing status to see an estimate.
-</p>
+                <select id="filing">
 
-<h4>Can I calculate monthly take-home pay?</h4>
+                    <option value="single">
+                        Single
+                    </option>
 
-<p>
-Yes. The calculator displays estimated annual, monthly, biweekly, weekly
-and hourly take-home pay.
-</p>
+                    <option value="married">
+                        Married Filing Jointly
+                    </option>
 
-<h4>Is this an official tax calculator?</h4>
+                    <option value="hoh">
+                        Head of Household
+                    </option>
 
-<p>
-No. This tool is an estimate for general informational purposes only.
-</p>
+                </select>
 
-</section>
+            </div>
+
+        </div>
+
+        <button id="calculateBtn">
+            Calculate Take-Home Pay
+        </button>
+
+        <div class="results">
+
+            <h3>Your Estimated Results</h3>
+
+            <div class="result-row">
+                <span>Annual Salary</span>
+                <strong id="grossSalary"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Federal Tax</span>
+                <strong id="federalTax"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Kansas State Tax</span>
+                <strong id="stateTax"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Social Security</span>
+                <strong id="socialSecurity"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Medicare</span>
+                <strong id="medicare"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Additional Medicare</span>
+                <strong id="additionalMedicare"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Total Estimated Tax</span>
+                <strong id="totalTax"></strong>
+            </div>
+
+            <div class="result-row">
+                <span>Annual Take-Home Pay</span>
+                <strong id="takeHome"></strong>
+            </div>
+
+            <div class="periods">
+
+                <div class="period">
+                    <span>Monthly</span>
+                    <strong id="monthly"></strong>
+                </div>
+
+                <div class="period">
+                    <span>Biweekly</span>
+                    <strong id="biweekly"></strong>
+                </div>
+
+                <div class="period">
+                    <span>Weekly</span>
+                    <strong id="weekly"></strong>
+                </div>
+
+                <div class="period">
+                    <span>Hourly</span>
+                    <strong id="hourly"></strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="ad">
+        Advertisement
+    </div>
+
+    <section class="card content" id="how-it-works">
+
+        <h2>Kansas Salary Calculator 2026</h2>
+
+        <p>
+            Use this Kansas salary calculator to estimate your take-home
+            pay from your annual gross salary. Enter your salary and filing
+            status to estimate federal, Kansas state and payroll taxes.
+        </p>
+
+        <h3>How to Calculate Take-Home Pay in Kansas</h3>
+
+        <p>
+            Enter your annual salary, select Kansas and choose your filing
+            status. The calculator then provides estimated annual, monthly,
+            biweekly, weekly and hourly take-home pay.
+        </p>
+
+        <h3>Federal Income Tax</h3>
+
+        <p>
+            Federal income tax uses progressive tax brackets. Your taxable
+            income may be subject to different tax rates across different
+            portions of your income.
+        </p>
+
+        <h3>Kansas State Income Tax</h3>
+
+        <p>
+            Kansas has individual income tax rates that can affect your
+            final take-home pay. The estimate shown by this calculator uses
+            the tax rules programmed into the calculator.
+        </p>
+
+        <h3>Social Security and Medicare</h3>
+
+        <p>
+            Employee payroll taxes can include Social Security and Medicare.
+            The calculator estimates these taxes based on the salary entered.
+        </p>
+
+    </section>
+
+    <section class="card content">
+
+        <h2>Why Does Kansas Matter?</h2>
+
+        <p>
+            Your state can affect your take-home pay because state tax rules
+            differ across the United States.
+        </p>
+
+        <p>
+            Your actual paycheck can also depend on deductions, benefits,
+            retirement contributions, credits, local taxes and other
+            individual circumstances.
+        </p>
+
+    </section>
+
+    <section class="card content" id="faq">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h4>How much is $75,000 a year after taxes in Kansas?</h4>
+
+        <p>
+            Enter $75,000 in the calculator above and select your filing
+            status to receive an estimate.
+        </p>
+
+        <h4>Can I calculate monthly take-home pay?</h4>
+
+        <p>
+            Yes. The calculator provides estimated annual, monthly,
+            biweekly, weekly and hourly take-home pay.
+        </p>
+
+        <h4>Is this an official Kansas tax calculator?</h4>
+
+        <p>
+            No. This is an estimate for general informational and
+            educational purposes.
+        </p>
+
+        <h4>Will my actual paycheck be the same?</h4>
+
+        <p>
+            Not necessarily. Actual pay can vary based on deductions,
+            benefits, credits, withholding elections and other factors.
+        </p>
+
+    </section>
+
+    <section class="card content">
+
+        <h2>Kansas Salary Calculator Disclaimer</h2>
+
+        <div class="notice">
+
+            This calculator provides estimates for general informational
+            and educational purposes only. It is not tax, legal, accounting
+            or financial advice.
+
+            <br><br>
+
+            Actual taxes and take-home pay may differ based on deductions,
+            credits, benefits, local taxes, payroll settings, income sources
+            and individual circumstances.
+
+            <br><br>
+
+            Consult official federal and state tax resources or a qualified
+            tax professional for advice about your specific situation.
+
+        </div>
+
+    </section>
 
 </main>
 
 <footer>
-© 2026 US Salary Calculator. For informational purposes only.
+
+    <div class="footer-inner">
+
+        <div class="footer-links">
+
+            <a href="../">Home</a>
+            <a href="../privacy-policy/">Privacy Policy</a>
+            <a href="../terms/">Terms of Use</a>
+            <a href="../disclaimer/">Disclaimer</a>
+            <a href="../about/">About</a>
+            <a href="../contact/">Contact</a>
+
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 US Salary Calculator. All rights reserved.
+        </p>
+
+    </div>
+
 </footer>
 
 <script src="../calculator.js"></script>
 
 </body>
 </html>
+```
+
